@@ -1,0 +1,19 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    upAxis = "Z"
+    metersPerUnit = 0.01
+    startTimeCode = 1
+    endTimeCode = 10
+    framesPerSecond = 24
+    timeCodesPerSecond = 24
+)
+
+def Xform "World" {
+    def Camera "camMain" {
+        float focalLength = 50
+    }
+    def Camera "camAlt" {
+        float focalLength = 35
+    }
+}

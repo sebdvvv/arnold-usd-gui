@@ -1,0 +1,34 @@
+#usda 1.0
+(
+    renderSettingsPrimPath = "/Render/Preview"
+)
+
+def Scope "Render" {
+    def RenderSettings "Preview" {
+        rel camera = </World/camMain>
+        uniform int2 resolution = (640, 360)
+        int arnold:AA_samples = 2
+        float arnold:AA_adaptive_threshold = 0.015
+        bool arnold:enable_adaptive_sampling = 0
+        string arnold:bucket_scanning = "spiral"
+        rel products = </Render/Products/beauty>
+    }
+
+    def RenderSettings "Final" {
+        rel camera = </World/camAlt>
+        int arnold:AA_samples = 6
+    }
+
+    def Scope "Products" {
+        def RenderProduct "beauty" {
+            token productName = "beauty.exr"
+            token productType = "raster"
+        }
+    }
+
+    def ArnoldOptions "options" {
+        int AA_samples = 3
+        int GI_diffuse_depth = 1
+        uniform float AA_adaptive_threshold = 0.05
+    }
+}
