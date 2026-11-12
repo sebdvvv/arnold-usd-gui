@@ -3,10 +3,14 @@
 
 Minimal dark UI to **kick Arnold renders from USD**.
 
-Drop a `.usd`, `.usda`, or `.usdc` file, optionally layer a RenderSettings USD above it, pick a camera and an output path, then press **Kick Arnold Render**. The tool writes a temporary USD (scene + RenderSettings + your edits) and runs `kick` on it.
 
 <img width="608" height="666" alt="2026-11-12_18-43-05" src="https://github.com/user-attachments/assets/2886f812-29cc-4572-8641-111c886550cb" />
 
+
+- Drop a `.usd`, `.usda`, or `.usdc` file.
+- Optionally layer a RenderSettings USD above it.
+- Pick a camera and an output path or let the app defaults.
+- Press **Kick Arnold Render**. The tool writes a temporary USD (scene + RenderSettings + your edits) and runs `kick` on it.
 
 ## Requirements
 
